@@ -1,0 +1,216 @@
+
+
+    /* 主体的样式 */
+    body {
+        margin:0;
+        width:100%;
+        height:100%;
+        font:16px Arial, sans-serif;
+        background-color: #fff;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+
+        /* 页脚的样式 */
+        footer {
+            box-sizing: border-box;
+            width:100%;
+            height:50px;
+            text-align:center;
+            margin:40px 0px 0px 0px ;
+            
+          
+        }
+
+    main {
+        
+        box-sizing: border-box;
+        width:1200px;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main>* {
+        margin:40px;
+        background-color:#eee;
+    }
+    h1 {
+        display: inline;
+       
+    }
+    h2 {
+        font-size:36px;
+        color: #666;
+        background-color: #0cc;
+        padding:4px;
+    }
+    /* 导航栏的样式 */
+    nav.top{
+        display: inline-block;
+        background-color: #0cc;
+        color:#000;
+        width:100%;
+        height:48px;    
+        margin:0px 0px 20px 0px;
+        padding:3px auto 3px auto;
+    }
+
+    /* 列表的样式 */
+    nav.top ul {
+       
+        float:right;
+        padding-right:20px;
+        list-style-type: none;
+    }
+    nav.top li {
+        
+        display: inline-block;
+    }
+
+    nav.top li a {
+        color:#fff;
+     
+    }
+  
+    nav.right {
+        position:fixed;
+        box-sizing: border-box;
+        top:50%;
+        right:0px;
+        width:150px;
+        height:300px;
+        margin-top:-150px;
+       
+        background-color:rgba(33,33,33,0.6);
+    }
+    nav.right ul {
+        list-style-type: none;
+        padding:0px;
+    }
+    nav.right ul li {
+        margin: 14px;
+        text-align: center;
+    }
+    nav.right ul li a{
+        color:#fff;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    nav.right ul li a:hover {
+        color: #0cc;
+    }
+
+    /* 新闻区 */
+    .news {
+       
+        padding:10px 20px 10px 20px;
+        box-sizing: border-box;
+        width:1000px;
+        min-height: 200px;  
+    }
+
+    
+  
+
+    /* 商品项样式 */
+    .goods {
+       
+        padding:10px 20px 10px 20px;
+        box-sizing: border-box; 
+        width:1000px;
+    }
+
+    #goods-list {
+        display: -webkit-flex;
+        display: flex;
+        box-sizing:border-box;
+        flex-flow: row wrap;
+        justify-content:center;
+        text-align: center;
+       
+      
+    }
+
+    #goods-list>* {
+        margin:20px;
+        padding:10px;
+        background-color: #fff;
+    }
+
+    #goods-list>*:hover {
+        box-shadow:0px 0px  10px 5px #aaa;
+       
+    }
+
+    #goods-list img {
+        width:200px;
+        height: 150px;
+        display: block;
+    }
+
+
+
+    .news {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        height: 22em;
+    }
+
+    /* 切换下一页的工具条的样式 */
+    #toggle-pages {
+        margin:10px auto 10px auto;
+        text-align: center;
+    }
+    
+   #toggle-pages a {
+       background-color: #fff;
+   }
+    #toggle-pages a span {
+        /* box-sizing: border-box; */
+        border-style: solid;
+        border-width: 1px;
+        padding:3px 5px 3px 5px;
+    }
+    #toggle-pages a span:hover {
+        border-style: solid;
+        border-width: 3px;
+        border-color:#0cc;
+        }
+    
+
+    /*<a>标签的样式*/
+    a:link {
+        color:#333;
+        text-decoration-line: none;
+    }
+    
+    a:hover {
+       color:#acc;
+    }
+    
+    a:visited {
+        text-decoration-line: none;
+        color:#ccc;
+    }
+
+
+    /* 清除浮动的样式 */
+    .clearfix:after{
+        content:".";
+        clear:both;
+        display: block;
+        height:0px;
+        visibility:hidden;
+    }
+
+
+ 
