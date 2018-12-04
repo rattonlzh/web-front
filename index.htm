@@ -108,7 +108,8 @@
             document.getElementById("goods-list").innerHTML=txt;
             }
         }
-        xmlhttp.open("GET", 'goods-list.xml', )
+        xmlhttp.open("GET", 'goods-list.xml', true);
+        xmlhttp.send();
 
     }
 
