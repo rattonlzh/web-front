@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>首页-OOX交易网站</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+        <nav class="top clearfix">
+                <h1>OOX交易网站</h1>
+                <ul>
+                    <li><a href="login.htm">登录</a></li>
+                    <li><a href="register.htm">注册</a></li>
+                </ul>
+            </nav>
+            <main>
+                    <form action="sell" method="post">
+                            <input type="hidden" name="method" value="sellservice">
+                            商品类别:<input type="text" name="cid"/><br>
+                            商品名称:<input type="text" name="pname"/><br>
+                            商品图片:<input type="file" name="pimage"/><br>
+                            商品价格:<input type="text" name="show_price"/><br>
+                            商品数量:<input type="number" name="num"/><br>
+                            商品介绍:<input type="text" name="pdesc"/><br>
+                            <input type="submit" value="提交">
+                        </form>
+            </main>
+
+</body>

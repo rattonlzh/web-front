@@ -15,7 +15,7 @@
         <ul>
             <li><a href="login.htm">登录</a></li>
             <li><a href="register.htm">注册</a></li>
-            
+
         </ul>
     </nav>
     <main>
@@ -28,27 +28,58 @@
                         a
                     </p>
                 </div> -->
-            
-                <a href="" style="float:right;">>>>查看更多</a>
+
+                <a href="news.htm" style="float:right;">>>>查看更多</a>
             </div>
         </div>
 
 
         <div class="goods">
             <h2>交易中心</h2>
+            <form method="GET">
+                <input name="keyword">
+            </form>
             <div>按价格排序:<span>升序</span>|<span>降序</span></div>
             <div id="goods-list">
-                <script>
+                <script src="content.js">
                     loadGoods();
                 </script>
-                <!-- <div id="item01">
+                <div id="item01">
                     <a href="">
                         <img src="images/test.png" alt="商品图片">
                         <div id="price">￥9999.99元</div>
                         <div id="name">商品名字</div>
                     </a>
-                </div> -->
-               
+                </div>
+                <div id="item01">
+                    <a href="">
+                        <img src="images/test.png" alt="商品图片">
+                        <div id="price">￥9999.99元</div>
+                        <div id="name">商品名字</div>
+                    </a>
+                </div>
+                <div id="item01">
+                    <a href="">
+                        <img src="images/test.png" alt="商品图片">
+                        <div id="price">￥9999.99元</div>
+                        <div id="name">商品名字</div>
+                    </a>
+                </div>
+                <div id="item01">
+                    <a href="">
+                        <img src="images/test.png" alt="商品图片">
+                        <div id="price">￥9999.99元</div>
+                        <div id="name">商品名字</div>
+                    </a>
+                </div>
+                <div id="item01">
+                    <a href="">
+                        <img src="images/test.png" alt="商品图片">
+                        <div id="price">￥9999.99元</div>
+                        <div id="name">商品名字</div>
+                    </a>
+                </div>
+
 
             </div>
 
@@ -70,49 +101,17 @@
         </div>
 
     </main>
-  <nav class="right">
-      <ul>
-          <li><a href="">发布交易</a></li>
-          <li><a href="forum.htm">论坛入口</a></li>
-      </ul>
+    <nav class="right">
+        <ul>
+            <li><a href="">发布交易</a></li>
+            <li><a href="forum.htm">论坛入口</a></li>
+        </ul>
     </nav>
 
     <footer>
         <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
     </footer>
 </body>
-<script type="text/javascript" src="js/jquery-3.3.1.js">
-    function loadGoods() {
-        var xmlhttp;
-        if (window.XMLHttpRequest) {
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function(){
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                xmlDoc=xmlhttp.responseXML; 
-            txt=""; 
-            xmlDoc = xmlhttp.responseXML.documentElement;
-            x=xmlDoc.getElementsByTagName("GOODS"); 
-            for (i=0;i<x.length;i++) 
-            { 
-                text += '<div id="item' + i + '">';
-                text += '<a href="/detail.htm">' + '<img src="images/' + 
-                    x[i].childNodes[0].nodeValue + '" alt="商品图片">'; 
-                text += '<div id="price">' + x[i].childNodes[1].nodeValue +
-                    '</div>';
-                text += '<div id="name">' + x[i].childNodes[2].nodeValue + '</div>'; 
-                text += '</a> </div>';
-            } 
-            document.getElementById("goods-list").innerHTML=txt;
-            }
-        }
-        xmlhttp.open("GET", 'goods-list.xml', true);
-        xmlhttp.send();
 
-    }
-
-</script>
 
 </html>
