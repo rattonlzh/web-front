@@ -1,19 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>登录页-OOX</title>
+
     <style>
+
         body {
+
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
         }
+
         #wrapper {
-            
             background-color: #eee;
             border-radius: 30px;
             width:550px;
@@ -22,80 +35,149 @@
             flex-direction: column;
             align-items: center;
         }
+
         input {
+
             width:250px;
+
             height:3em;
+
             margin-top:2em;
+
             display: block;
+
             background-color:#fefefe;
+
             border:none;
+
         }
-    
+
+
+
         form {
+
             height:70%;
+
             display: flex;
+
             flex-direction: column;
-            align-items: center;           
+
+            align-items: center;
+
         }
+
         .bar {
+
             margin:1em auto 2em auto;
+
         }
+
         button {
+
             margin-bottom: 2em;
+
             width:200px;
+
             height:4em;
 
+
+
             background:linear-gradient(to right, rgb(44, 197, 197), #d0d);
+
             color:#fff;
+
             border-radius: 30px;
+
             border:none;
+
         }
+
         button:hover {
+
             background:linear-gradient(to left, rgb(44, 197, 197), #d0d);
+
         }
-    
-    .bar {
-        width:100%;
-    }
-    .left {
-        float:left;
+
+
+
+        .bar {
+
+            width:100%;
+
         }
-    .right {
-        float:right;
-    }
+
+        .left {
+
+            float:left;
+
+        }
+
+        .right {
+
+            float:right;
+
+        }
+
     </style>
+
 </head>
 
+
+
 <body>
-    <div id="wrapper">
-        <h2>欢迎登录OOX网站</h2>
-        <form action="login" method="POST">
+
+<div id="wrapper">
+
+    <h2>欢迎登录OOX网站</h2>
+
+    <form action="login" method="POST">
+
             <span class="input">
-                <input name="account" type="text" placeholder="请输入登录用的手机号码">
+
+                <input name="userName" type="text" placeholder="请输入用户名">
+
             </span>
-            <span class="input">
+
+        <span class="input">
+
                 <input name="password" type="password" placeholder="请输入密码">
+
             </span>
-            <div class="bar">
-                <div class="left">
-                    还没有账号？<br>
-                    <a href="register.htm">点此注册</a>
-                </div>
-                <div class="right">
-                    <a href="">忘记密码</a>
-                </div>
+
+        <div class="bar">
+
+            <div class="left">
+
+                还没有账号？<br>
+
+                <a href="register.htm">点此注册</a>
+
             </div>
-            <button>立即登录</button>
 
-        </form>
+            <div class="right">
 
-    </div>
+                <a href="">忘记密码</a>
+
+            </div>
+
+        </div>
+
+        <button>立即登录</button>
+
+    </form>
+</div>
 
 
-    <footer>
-        <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
-    </footer>
+
+
+
+<footer>
+
+    <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
+
+</footer>
+
 </body>
-<script type="text/javascript" src="main.js"></script>
 
+<script type="text/javascript" src="main.js"></script>
 </html>
