@@ -8,27 +8,20 @@ function loadGoods() {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            data = xmlhttp.responseText;
-            data = JSON.parse(data);
-            for(let dict in data) {
-                
+            dataArray = xmlhttp.responseText;
+            dataArray = JSON.parse(dataArray);
+            html = ""
+            for(let data in dataArray) {
+                html += '<div>\
+                <a href="detail.htm?name=pid">\
+                <img src="' + data[pimage] +'" alt\
+                ="商品图片">\
+                <div>' + data[shop-price] + '</div>'
+                + '<div>' + data[pname] + '</div>';
             }
-          
-            // xmlDoc = xmlhttp.responseXML.documentElement;
-            // x = xmlDoc.getElementsByTagName("GOODS");
-            // for (i = 0; i < x.length; i++) {
-            //     text += '<div id="item' + i + '">';
-            //     text += '<a href="/detail.htm">' + '<img src="images/' +
-            //         x[i].childNodes[0].nodeValue + '" alt="商品图片">';
-            //     text += '<div id="price">' + x[i].childNodes[1].nodeValue +
-            //         '</div>';
-            //     text += '<div id="name">' + x[i].childNodes[2].nodeValue + '</div>';
-            //     text += '</a> </div>';
-            // }
-            // document.getElementById("goods-list").innerHTML = txt;
+            document.getElementById('goods-list').innerHTML(html);
         }
-    }
-    xmlhttp.open("GET", 'goods-list.xml', true);
+    xmlhttp.open("GET", 'goods-list.json', true);
     xmlhttp.send();
 }
 
