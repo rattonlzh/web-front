@@ -1,29 +1,40 @@
 // 加载商品信息
+
 function loadGoods() {
+
     var xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     } else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            dataArray = xmlhttp.responseText;
-            dataArray = JSON.parse(dataArray);
-            html = ""
-            for(let data in dataArray) {
-                html += '<div>\
-                <a href="detail.htm?name=pid">\
-                <img src="' + data[pimage] +'" alt\
+
+    xmlhttp.open("GET","product", true);
+    xmlhttp.send(null);
+    xmlhttp.onreadystatechange=function(){
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+        dataArray = xmlhttp.responseText;
+        dataArray = JSON.parse(dataArray);
+
+        var html = "";
+        for (let data of dataArray) {
+            html += '<div>\
+                    <a href="detail.htm?name=id">\
+            <img src="' + data.pimage + '" alt\
                 ="商品图片">\
-                <div>' + data[shop-price] + '</div>'
-                + '<div>' + data[pname] + '</div>';
-            }
-            document.getElementById('goods-list').innerHTML(html);
+            <div>' + data.shop_price + '</div>'
+                + '<div>' + data.pname + '</div>';
         }
-    xmlhttp.open("GET", 'goods-list.json', true);
-    xmlhttp.send();
+        document.getElementById("goods-list").innerHTML = html;
+    }
+
+  }
 }
+
+
+
+
 
 
 // <html>
