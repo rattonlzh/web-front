@@ -8,7 +8,7 @@
     <title>注册页-OOX</title>
     <link rel="stylesheet" type="text/css" href="css/reglog.css">
     <style>
-      
+
 
         input {
             width:12em;
@@ -20,6 +20,8 @@
             margin-top:3em;
         }
     </style>
+    <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+
 </head>
 
 <body>
@@ -27,28 +29,37 @@
     <div id="wrapper">
         <div id="register">
             <h2>快速注册</h2>
-            <form action="register" method="POST">
-                    <div>
-                        <span>用户名&nbsp</span>
-                        <span class="input"><input type="text" placeholder="请输入3-10个字符 " required></span>
-                    </div>
-                    <div>
-                        <span>注册邮箱&nbsp</span>
-                        <span class="input"><input type="text" placeholder="请输入你的邮箱账号 " required></span>
-                    </div>
-                    <div>
-                        <span>创建新密码&nbsp</span>
-                        <span class="input"><input type="password" placeholder="密码由数字、字母和标点符号组成 " required></span>
-                    </div>
-                    <div>
-                        <span>确认密码&nbsp</span>
-                        <span class="input"><input type="password" placeholder="请再次输入密码 " required></span>
-                    </div>
-                    <div>已有账号<a href="login.htm">立即登录</a></div>
+            <form action="register" method="POST"
+            class="clearfix">
+                <div>
+                    <span>用户名&nbsp</span>
+                    <span class="input"><input type="text" maxlength=10 placeholder="请输入3-10个字符 " required></span>
+                </div>
+                <div>
+                    <span>注册邮箱&nbsp</span>
+                    <span class="input"><input type="email" placeholder="请输入你的邮箱账号 " required></span>
+                
+                </div>
+                <div>
+                    
+                    <span>创建新密码&nbsp</span>
+                    <script type="text/javascript" src="js/content.js"></script>
+                    <span id="pass" class="input">
+                        <input type="password" name="password" id="pass" placeholder="密码由数字、字母和标点符号组成 " required>
+                    </span>
+                    <span id="passstrength"></span>
+                </div>
+                <div>
+                    <span>确认密码&nbsp</span>
+                    <span class="input"><input type="password" placeholder="请再次输入密码 " required></span>
+                </div>
+                <div>已有账号<a href="login.htm">立即登录</a></div>
+
+                <div class="btn">
+                        <button>完成注册</button>
+                </div>
 
                 
-
-                <button>完成注册</button>
             </form>
 
 
