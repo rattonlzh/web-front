@@ -32,6 +32,9 @@ function loadGoods() {
   }
 }
 
+$("input").blur(function(){ 
+    $(this).css("background-color","#ffffff"); 
+  });
 $('#pass').keyup(function(e) {
     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
@@ -50,6 +53,8 @@ $('#pass').keyup(function(e) {
     }
     return true;
    });
+
+
 // 登录请求
 // 注册请求
 // 加载新闻

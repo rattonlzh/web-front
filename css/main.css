@@ -1,7 +1,9 @@
 
 
-    /* 主体的样式 */
     body {
+        background-image: url(../images/background2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
         margin:0;
         width:100%;
         height:100%;
@@ -15,7 +17,6 @@
         
     }
 
-        /* 页脚的样式 */
         footer {
             box-sizing: border-box;
             width:100%;
@@ -43,30 +44,27 @@
 
     main>* {
         margin:40px;
-        background-color:#eee;
+        background-color:rgba(33,33,33,0.6);
     }
     h1 {
         display: inline;
-       
+        color:#fff;
     }
     h2 {
         font-size:36px;
-        color: #666;
-        background-color: #0cc;
+        color: #fff;
         padding:4px;
     }
-    /* 导航栏的样式 */
     nav.top{
         display: inline-block;
-        background-color: #0cc;
-        color:#000;
+        background-color: rgba(33,33,33,0.6);
+        color:#fff;
         width:100%;
         height:48px;    
         margin:0px 0px 20px 0px;
         padding:3px auto 3px auto;
     }
 
-    /* 列表的样式 */
     nav.top ul {
        
         float:right;
@@ -108,11 +106,10 @@
         font-size: 20px;
     }
 
-    nav.right ul li a:hover {
-        color: #0cc;
+    nav.right ul li:hover {
+        background-color: #0cc;
     }
 
-    /* 新闻区 */
     .news {
        
         padding:10px 20px 10px 20px;
@@ -124,15 +121,39 @@
     
   
 
-    /* 商品项样式 */
     .goods {
        
         padding:10px 20px 10px 20px;
         box-sizing: border-box; 
         width:1000px;
     }
+    .center {
+        text-align: center;
+    }
+    input {
+    width:12em;
+    height:2em; 
+    padding-left:1em;
+    background-color: #fefefe;
+    border-radius: 15px;
+    border-style: none;  
+}
 
+input:hover, button:hover {
+    box-shadow: 0 0 10px 5px #fff;
+}
+
+input:focus{
+    border-radius: 15px;
+    background-color: #fff;
+    transform: scale(1.2);
+    transition-duration: 300ms;
+    
+}
     #goods-list {
+        min-width:60%;
+        min-height:960px;
+        
         display: -webkit-flex;
         display: flex;
         box-sizing:border-box;
@@ -169,7 +190,6 @@
         height: 22em;
     }
 
-    /* 切换下一页的工具条的样式 */
     #toggle-pages {
         margin:10px auto 10px auto;
         text-align: center;
@@ -179,7 +199,6 @@
        background-color: #fff;
    }
     #toggle-pages a span {
-        /* box-sizing: border-box; */
         border-style: solid;
         border-width: 1px;
         padding:3px 5px 3px 5px;
@@ -194,7 +213,6 @@
         list-style-type: none;
     }
 
-    /*<a>标签的样式*/
     a:link {
         color:#333;
         text-decoration-line: none;
@@ -206,11 +224,10 @@
     
     a:visited {
         text-decoration-line: none;
-        color:#ccc;
+        color:#000;
     }
 
 
-    /* 清除浮动的样式 */
     .clearfix:after{
         content:".";
         clear:both;
