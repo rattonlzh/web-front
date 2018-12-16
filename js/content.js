@@ -71,6 +71,10 @@ $('#submit').click(function() {
        
         else return true;
 })
+
+$('#all-news').onload(function() {
+    
+}) 
 // 登录请求
 // 注册请求
 // 加载新闻
