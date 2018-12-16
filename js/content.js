@@ -22,7 +22,7 @@ function loadGoods() {
                 html += '<div>\
                     <a href="detail.htm?name=id">\
             <img src="' + data.pimage + '" alt\
-                ="商品图片">\
+                ="商品图片" width="150" height="150">\
             <div>' + data.shop_price + '</div>'
                     + '<div>' + data.pname + '</div>';
             }
