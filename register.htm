@@ -10,16 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/reglog.css">
    
     <style>
-
-
-        input {
-            width:12em;
-        }
-        .input {
-            height:1.5em;
-        }
-        form>* {
-            margin-top:3em;
+        #passstrength {
+            display: block;
         }
     </style>
     <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
@@ -31,34 +23,35 @@
     <div id="wrapper">
         <div id="rec">
             <h2>快速注册</h2>
-            <form action="register" method="POST"
-            class="clearfix">
+            <form action="register" method="POST" 
+        >
                 <div>
                     <span>用户名&nbsp</span>
-                    <span class="input"><input type="text" maxlength=10 placeholder="请输入3-10个字符 " required></span>
+                    <input type="text" maxlength=10 placeholder="请输入3-10个字符 " required>
                 </div>
                 <div>
                     <span>注册邮箱&nbsp</span>
-                    <span class="input"><input type="email" placeholder="请输入你的邮箱账号 " required></span>
+                   <input type="email" placeholder="请输入你的邮箱账号 " required>
                 
                 </div>
                 <div>
                     
                     <span>创建新密码&nbsp</span>
                     <script type="text/javascript" src="js/content.js"></script>
-                    <span id="pass" class="input">
-                        <input type="password" name="password" id="pass" placeholder="密码由数字、字母和标点符号组成 " required>
-                    </span>
-                    <span id="passstrength"></span>
+                    
+                        <input type="password" name="password" id="pass" placeholder="密码由数字、字母和下划线组成 " required>
+                   
+                    <div id="passstrength"></div>
                 </div>
                 <div>
                     <span>确认密码&nbsp</span>
-                    <span class="input"><input type="password" placeholder="请再次输入密码 " required></span>
+                    <input type="password" id="checkpass" placeholder="请再次输入密码 " required>
+                    <div id="diffpass"></div>
                 </div>
                 <div>已有账号<a href="login.htm">立即登录</a></div>
 
                 <div class="btn">
-                        <button>完成注册</button>
+                        <button id="submit">完成注册</button>
                 </div>
 
                 
@@ -68,7 +61,8 @@
 
         </div>
     </div>
-
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/content.js"></script>
 </body>
 
 

@@ -10,8 +10,7 @@
 
 
 #rec {      
-    box-shadow: 0px 0px 3px 2px #ccc;
-    background-color: #eee;
+    background-color: rgba(100,100,100,0.6);
     border-radius: 30px;
     width:580px;
     min-height:650px;
@@ -22,23 +21,20 @@
 }
 
 
+h2 {
+    color:#fff;
+}
+
+form:first-child {
+    margin-top:10px;
+}
 form>* {
-    margin-top:3em;
+    margin-bottom:2.5em;
 }
 form>div {
     text-align: right;
 }
-input {
-    font-size: 18px;
-    display: inline-block;
-    box-sizing: border-box;
-    width:18em;
-    border:none;
-    outline: none;
-    background-color: transparent;
-    margin-left:1.5em;
-    margin-right:1.5em;
-}
+
 .btn {
     position: absolute;
     left: 50%;
@@ -46,17 +42,9 @@ input {
     bottom:20px;
 
 }
-span.input {
-    background-color: #fefefe;
-    box-sizing: border-box;
-    height:3em;
-    border-radius: 1.5em;
-    padding:.7em 1.5em;
-}
 
-.input:hover {
-    box-shadow: 0px 0px 10px 3px #bbb;
-}
+
+
 
 
 .bar {
@@ -80,8 +68,4 @@ button {
 }
 button:hover {
     background:linear-gradient(to left, rgb(44, 197, 197), #d0d);
-}
-.input {
-    align-self: center;
-    
 }
