@@ -20,7 +20,7 @@
 <body class="clearfix" onload="loadGoods()">
 
     <nav class="top clearfix">
-        <a href="index.htm""> <h1>OOX交易网站</h1></a>
+        <a href="index.htm"> <h1>OOX交易网站</h1></a>
         <ul>
             <li><a href="login.htm">登录</a></li>
             <li><a href="register.htm">注册</a></li>
@@ -33,12 +33,18 @@
        
         <div class="goods">
                 <h2>交易中心</h2>
-                <div class="center"><input id="search"></div>
+                <div class="center">
+                    <form>
+                            <input id="search" type="search" placeholder="搜索你喜欢的商品"><button id="submit" style="width:100px;height:40px;"type="submit">点击搜索</button>
+
+                    </form>
+                </div>
             
-            <div>按价格排序:<span>升序</span>|<span>降序</span></div>
+            <!-- <div>按价格排序:<span>升序</span>|<span>降序</span></div> -->
             <div id="goods-list">
                 <!-- 测试 -->
                 <div>
+                    
                         <img src="images/goods.jpg" width="150" height="150"><br>
                         <div>￥99999.99元</div>
                         <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
@@ -110,7 +116,7 @@
             <li><a href="user.htm">用户中心</a></li>
             <li><a href="topup.htm">充值</a></li>
             <li><a href="intro.htm">操作介绍</a></li>
-            <li><a href="sell.htm">发布交易</a></li>
+            <li><a href="sell.htm">发布商品</a></li>
             <li><a href="forum.htm">论坛入口</a></li>
 
         </ul>
@@ -124,7 +130,7 @@
         <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
 
     </footer>
-<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/content.js"></script>
 </body>
 

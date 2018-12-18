@@ -32,8 +32,12 @@ function loadGoods() {
     }
 }
 
-flag1 = false;
-flag2 = false;
+function getParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}
 $('#pass').keyup(function () {
     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$", "g");
     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
@@ -54,8 +58,8 @@ $('#pass').keyup(function () {
     }
 });
 
-$('#checkpass,#pass').blur(function () {
-    if ($('#checkpass').val() != $('#pass').val()) {
+$('#pass,#checkpass').keyup(function () {
+    if ($('#checkpass').val() != '' && $('#checkpass').val() != $('#pass').val()) {
         $('#diffpass').html('两次密码输入不一致');
     } else {
         $('#diffpass').html("");
@@ -72,10 +76,14 @@ $('#submit').click(function() {
         else return true;
 })
 
+// 加载新闻
 $('#all-news').onload(function() {
     
 }) 
-// 登录请求
-// 注册请求
-// 加载新闻
+$('#goods-list a').onclick(function() {
+    
+})
+
+
+
 // 加载帖子

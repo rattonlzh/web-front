@@ -10,11 +10,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/reglog.css">
         <style>
-        h2 {
-                color:#000;
-                background-color: transparent;
-                text-align: center;
-        }
+      
         input, textarea {
                 background-color: #fff;
                 box-sizing: border-box;
@@ -46,7 +42,9 @@
         .data div {
                 margin-top:1.5em;
         }
-      
+      select,option {
+              color:#333;
+      }
      
         </style>
 </head>
@@ -59,14 +57,28 @@
                         <li><a href="register.htm">注册</a></li>
                 </ul>
         </nav>
+        <nav class="right">
+
+                        <ul>
+                            <li><a href="news.htm">新闻</a></li>
+                            <li><a href="user.htm">用户中心</a></li>
+                            <li><a href="topup.htm">充值</a></li>
+                            <li><a href="intro.htm">操作介绍</a></li>
+                            <li><a href="sell.htm">发布商品</a></li>
+                            <li><a href="forum.htm">论坛入口</a></li>
+                
+                        </ul>
+                
+                    </nav>
         <div id="wrapper">
                 <div id="rec">
-                <form action="sell" method="post">
+                                <h2>发布商品</h2>
+                <form action="sell" method="post" autocomplete="on">
 
                         <input type="hidden" name="method" value="sellservice" />
 
                         <div class="data">
-                                <h2>发布商品</h2>
+                               
                                 <div>
                                         <span> 商品名称:</span>
                                         <input type="text" name="pname"
@@ -112,6 +124,6 @@
                 </form>
         </div>
         </div>
-        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/content.js"></script>
 </body>
