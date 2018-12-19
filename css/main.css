@@ -377,6 +377,7 @@ input:focus{
         width:450px;
         height:450px;
         overflow: hidden;
+        background-color:rgba(33,33,33,.6);
     }
     .right-item {
         width:450px;
@@ -384,15 +385,26 @@ input:focus{
         float:right;
     }
 
+    #forum {
+        background-color: rgba(22,22,22,.5);
+        padding: 20px;
+        
+    }
     #forum textarea {
         background-color: rgba(44,44,44,.6);
         resize:none;
-        width:450px;
+        width:90%;
     }
     #forum span {
         vertical-align: top;    
     }
-
+#forum-list {
+  
+    width:800px;
+}
+#forum-list>* {
+    padding-bottom: 3em;
+}
 #detail main {
     box-sizing: border-box;
     width:450px;
