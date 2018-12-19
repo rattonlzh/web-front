@@ -1,5 +1,6 @@
 
 // 加载商品信息
+
 function loadGoods() {
 
     var xmlhttp;
@@ -8,6 +9,7 @@ function loadGoods() {
     } else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
+
 
     xmlhttp.open("GET", "product", true);
     xmlhttp.send(null);
@@ -30,6 +32,7 @@ function loadGoods() {
         }
 
     }
+
 }
 
 function getParam(name) {
@@ -58,6 +61,7 @@ $('#pass').keyup(function () {
     }
 });
 
+
 $('#pass,#checkpass').keyup(function () {
     if ($('#checkpass').val() != '' && $('#checkpass').val() != $('#pass').val()) {
         $('#diffpass').html('两次密码输入不一致');
@@ -76,7 +80,9 @@ $('#submit').click(function() {
         else return true;
 })
 
+
 // 加载新闻
+
 $('#all-news').onload(function() {
     
 }) 
