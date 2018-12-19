@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="zh-cn">
+
+<html lang="zh-CN">
+
+
+
 
 
 
@@ -14,111 +18,148 @@
 
     <title>首页-OOX交易网站</title>
 
-    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
 
 </head>
-
-
-
 <body class="clearfix" onload="loadGoods()">
 
-<nav class="top clearfix">
 
-    <h1>OOX交易网站</h1>
+    <nav class="top clearfix">
+        <a href="index.htm"> <h1>OOX交易网站</h1></a>
+        <ul>
+            <li><a href="login.htm">登录</a></li>
+            <li><a href="register.htm">注册</a></li>
+        </ul>
 
-    <ul>
+    </nav>
 
-        <li><a href="login.htm">登录</a></li>
+    <main>
+        
+       
+        <div class="goods">
+                <h2>交易中心</h2>
+                <div class="center">
+                    <form>
+                            <input id="search" type="search" placeholder="搜索你喜欢的商品"><button id="submit" style="width:100px;height:40px;"type="submit">点击搜索</button>
 
-        <li><a href="register.htm">注册</a></li>
+                    </form>
+                </div>
+            
+            <!-- <div>按价格排序:<span>升序</span>|<span>降序</span></div> -->
+            <div id="goods-list">
+                <!-- 测试 -->
+                <div>
+                    
+                        <img src="images/goods.jpg" width="150" height="150"><br>
+                        <div>￥99999.99元</div>
+                        <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                    </div>
+                    <div>
+                            <img src="images/goods.jpg" width="150" height="150"><br>
+                            <div>￥99999.99元</div>
+                            <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                        </div>
+                        <div>
+                                <img src="images/goods.jpg" width="150" height="150"><br>
+                                <div>￥99999.99元</div>
+                                <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                            </div>
+                            <div>
+                                    <img src="images/goods.jpg" width="150" height="150"><br>
+                                    <div>￥99999.99元</div>
+                                    <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                                </div>
+                                <div>
+                                        <img src="images/goods.jpg" width="150" height="150"><br>
+                                        <div>￥99999.99元</div>
+                                        <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                                    </div>
+                                    <div>
+                                        <img src="images/goods.jpg" width="150" height="150"><br>
+                                        <div>￥99999.99元</div>
+                                        <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                                    </div>
+                                    <div>
+                                        <img src="images/goods.jpg" width="150" height="150"><br>
+                                        <div>￥99999.99元</div>
+                                        <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                                    </div>
+                                    <div>
+                                        <img src="images/goods.jpg" width="150" height="150"><br>
+                                        <div>￥99999.99元</div>
+                                        <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                                    </div>
+                                    <div>
+                                        <img src="images/goods.jpg" width="150" height="150"><br>
+                                        <div>￥99999.99元</div>
+                                        <div>华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</div>
+                                    </div>
+
+            </div>
 
 
+            <div id="toggle-pages">
+                
+                <!-- <a href=""><span>上一页</span> </a>
 
-    </ul>
+                <a href=""><span>1</span></a>
 
-</nav>
+                <a href=""><span>2</span></a>
 
-<main>
+                <a href=""><span>3</span></a>
 
-    <div class="news">
-        <h2>新闻</h2>
-        <div class="news-list">
-            <a href="news.htm" style="float:right;">>>>查看更多</a>
+                <a href=""><span>4</span></a>
+
+                <a href=""><span>5</span></a>
+
+                <a href=""><span>6</span></a>
+
+                <a href=""><span>7</span></a>
+
+                <a href=""><span>8</span></a>
+
+                <a href=""><span>9</span></a>
+
+                <a href=""><span>...</span></a>
+
+                <span>第<label> </label>页/共<label> </label>页</span>
+
+                <a href=""><span>下一页</span></a> -->
+
+            </div>
+
         </div>
-    </div>
-
-    <div class="goods">
-
-        <h2>交易中心</h2>
-
-        <form method="GET">
-
-            <input name="keyword">
-
-        </form>
-
-        <div>按价格排序:<span>升序</span>|<span>降序</span></div>
-
-        <div id="goods-list">
-        </div>
-
-        <script src="js/content.js"></script>
-
-        <div id="toggle-pages">
-
-            <a href=""><span>上一页</span> </a>
-
-            <a href=""><span>1</span></a>
-
-            <a href=""><span>2</span></a>
-
-            <a href=""><span>3</span></a>
-
-            <a href=""><span>4</span></a>
-
-            <a href=""><span>5</span></a>
-
-            <a href=""><span>6</span></a>
-
-            <a href=""><span>7</span></a>
-
-            <a href=""><span>8</span></a>
-
-            <a href=""><span>9</span></a>
-
-            <a href=""><span>...</span></a>
-
-            <span>第<label> </label>页/共<label> </label>页</span>
-
-            <a href=""><span>下一页</span></a>
-
-        </div>
-
-    </div>
 
 
 
-</main>
+    </main>
 
-<nav class="right">
+    <nav class="right">
 
-    <ul>
+        <ul>
+            <li><a href="news.htm">新闻</a></li>
+            <li><a href="user.htm">用户中心</a></li>
+            <li><a href="topup.htm">充值</a></li>
+            <li><a href="intro.htm">操作介绍</a></li>
+            <li><a href="sell.htm">发布商品</a></li>
+            <li><a href="forum.htm">论坛入口</a></li>
 
-        <li><a href="sell.html">发布交易</a></li>
+        </ul>
 
-        <li><a href="forum.htm">论坛入口</a></li>
-
-    </ul>
-
-</nav>
+    </nav>
 
 
 
-<footer>
+    <footer>
 
-    <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
+        <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
 
-</footer>
-
+    </footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/content.js"></script>
 </body>
+
 </html>
+

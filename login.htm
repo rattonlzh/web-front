@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="zh-CN">
+
 
 
 
@@ -12,111 +13,11 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>登录页-OOX</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/reglog.css">
 
+    <title>登录页-OOX交易网站</title>
     <style>
-
-        body {
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-        }
-
-        #wrapper {
-            background-color: #eee;
-            border-radius: 30px;
-            width:550px;
-            height:530px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        input {
-
-            width:250px;
-
-            height:3em;
-
-            margin-top:2em;
-
-            display: block;
-
-            background-color:#fefefe;
-
-            border:none;
-
-        }
-
-
-
-        form {
-
-            height:70%;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-        }
-
-        .bar {
-
-            margin:1em auto 2em auto;
-
-        }
-
-        button {
-
-            margin-bottom: 2em;
-
-            width:200px;
-
-            height:4em;
-
-
-
-            background:linear-gradient(to right, rgb(44, 197, 197), #d0d);
-
-            color:#fff;
-
-            border-radius: 30px;
-
-            border:none;
-
-        }
-
-        button:hover {
-
-            background:linear-gradient(to left, rgb(44, 197, 197), #d0d);
-
-        }
-
-
-
-        .bar {
-
-            width:100%;
-
-        }
-
-        .left {
-
-            float:left;
-
-        }
-
-        .right {
-
-            float:right;
-
-        }
 
     </style>
 
@@ -126,56 +27,44 @@
 
 <body>
 
-<div id="wrapper">
+    <nav><a href="index.htm"> <h1>OOX交易网站</h1></a></nav>
+    <div id="wrapper">
+        <div id="rec">
 
-    <h2>欢迎登录OOX网站</h2>
 
-    <form action="login" method="POST">
+            <h2>欢迎登录OOX网站</h2>
+            <form action="login" method="POST"
+            class="clearfix" >
+                <div><span class="input">
+                        <input name="account" type="email" placeholder="请输入登录用的邮箱号码" required>
+                    </span></div>
+                <div> <span class="input">
+                        <input name="password" type="password" placeholder="请输入密码" required>
+                    </span></div>
+                <div class="bar">
+                    <div class="left">
+                        还没有账号？<br>
+                        <a href="register.htm">点此注册</a>
+                    </div>
+                    <div class="right">
+                        <a href="reset.htm">忘记密码</a>
+                    </div>
+                </div>
+                <div class="btn">
+                        <button>立即登录</button>
+                </div>
+                
 
-            <span class="input">
-
-                <input name="userName" type="text" placeholder="请输入用户名">
-
-            </span>
-
-        <span class="input">
-
-                <input name="password" type="password" placeholder="请输入密码">
-
-            </span>
-
-        <div class="bar">
-
-            <div class="left">
-
-                还没有账号？<br>
-
-                <a href="register.htm">点此注册</a>
-
-            </div>
-
-            <div class="right">
-
-                <a href="">忘记密码</a>
-
-            </div>
-
+            </form>
         </div>
+    </div>
 
-        <button>立即登录</button>
-
-    </form>
-</div>
-
-
-
-
-
-<footer>
-
-    <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
-
-</footer>
+<!-- 
+    <footer>
+        <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
+    </footer> -->
+    <script src="js/jquery-3.3.1.min.js "></script>
+    <script src="js/content.js "></script>
 
 </body>
 

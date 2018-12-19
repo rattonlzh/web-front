@@ -1,35 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <title>Document</title>
+    <title>商品详情-OOX交易网站</title>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div>
-            <img src="" alt="">
-            <p id="name">商品名</p>
-            <p id="price">￥9999.99元</p>
-            <p>库存量<span id="storage"></span></p>
-            <button id="buy">点此购买</button>
-            <button id="contact">与商家联系</button>
-           <p id="discription">blaaaaaaaaaaaa</p>
-        </div>
+    <nav class="top clearfix">
+        <a href="index.htm"><h1>OOX交易网站</h1></a>
 
-    </div>
-    <div id="detail">
-            <script>
-                loadDetail();
-            </script>
+        <ul>
+            <li><a href="login.htm">登录</a></li>
+            <li><a href="register.htm">注册</a></li>
+        </ul>
+
+    </nav>
+    <div id="wrapper">
+
+        <div id="detail">
+            <div class="clearfix">
+                
+                   
+                
+
+                <main>
+                    <div>
+                        商品名：<span id="name">为手机华为手机华为手机 </span>
+                    </div>
+                    <div>
+                        价格:<span id="price">￥9999.99元</span>
+                    </div>
+                    <div>
+                        库存量:<span id="num">999</span>
+                    </div>
+                    <div> <button id="buy">点此购买</button></div>
+                    <div>
+                        <button id="contact">与商家联系</button>
+                    </div>
+                </main>
+                <img src="images/goods.jpg" alt="">
+            </div>
+            <div>
+                <h3>产品描述</h3>
+                <span id="description">这是产品描述这是产品描述这是产品描述这是产品描述这是产品描述这是产品描述</span>
+            </div>
+
+
         </div>
+    </div>
+    <nav class="right">
+
+        <ul>
+            <li><a href="news.htm">新闻</a></li>
+            <li><a href="user.htm">用户中心</a></li>
+            <li><a href="topup.htm">充值</a></li>
+            <li><a href="intro.htm">操作介绍</a></li>
+            <li><a href="sell.htm">发布商品</a></li>
+            <li><a href="forum.htm">论坛入口</a></li>
+
+        </ul>
+
+    </nav>
     <footer>
         <small>Copyright © 2018 XXXXXXX All Rights Given up.</small>
     </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/detail.js"></script>
 </body>
 
 

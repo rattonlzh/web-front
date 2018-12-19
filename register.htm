@@ -1,112 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册页-OOX</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/reglog.css">
+   
     <style>
-        
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        #passstrength {
+            display: block;
         }
-        #wrapper {      
-            box-shadow: 0px 0px 3px 2px #ccc;
-            background-color: #eee;
-            border-radius: 30px;
-            width:550px;
-            height:530px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        form>div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end; 
-        }
-        form>div>* {
-            margin-top:2em;
-        }
-        input {
-            width:16em;
-            border:none;
-            background-color:#fefefe;
-        }
-        .input {
-            background-color: #fefefe;
-            padding:10px;
-            width:18em;
-            height:4em;
-            border-radius:1em;
-        }
-        
-        .input:hover {
-            box-shadow: 0px 0px 3px 2px #bbb;
-        }
-        
-        
-        .bar {
-            margin:1em auto 2em auto;
-        }
-        button {
-            
-            width:200px;
-            height:4em;
-            margin-top:1em;
-            background:linear-gradient(to right, rgb(44, 197, 197), #d0d);
-            color:#fff;
-            border-radius: 30px;
-            border:none;    
-        }
-        button:hover {
-            background:linear-gradient(to left, rgb(44, 197, 197), #d0d);
-        }
-        
     </style>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+
 </head>
 
 <body>
+    <nav><a href="index.htm"><h1>OOX交易网站</h1></a></nav>
     <div id="wrapper">
-        <h2>快速注册</h2>
-        <form action="register" method="POST">
-            <div>
+        <div id="rec">
+            <h2>快速注册</h2>
+            <form action="register" method="POST" 
+        >
                 <div>
                     <span>用户名&nbsp</span>
-                    <span class="input"><input type="text" placeholder="请输入3-10个字符 "></span>
+                    <input type="text" maxlength=10 placeholder="请输入3-10个字符 " required>
                 </div>
                 <div>
                     <span>注册邮箱&nbsp</span>
-                    <span class="input"><input type="text" placeholder="请输入你的邮箱账号 "></span>
+                   <input type="email" placeholder="请输入你的邮箱账号 " required>
+                
                 </div>
                 <div>
+                    
                     <span>创建新密码&nbsp</span>
-                    <span class="input"><input type="password" placeholder="密码由数字、字母和标点符号组成 "></span>
+                    
+                    
+                        <input type="password" name="password" id="pass" placeholder="密码由数字、字母和下划线组成 " required>
+                   
+                    <div id="passstrength"></div>
                 </div>
-                <div>
+                <div class="bottom">
                     <span>确认密码&nbsp</span>
-                    <span class="input"><input type="password" placeholder="请再次输入密码 "></span>
+                    <input type="password" id="checkpass" placeholder="请再次输入密码 " required>
+                    <div id="diffpass"></div>
                 </div>
-                <div>已有账号<a href="login.htm">立即登录</a></div>
+                <div class="bar">已有账号<a href="login.htm">立即登录</a></div>
 
-            </div>
+                <div class="btn">
+                        <button id="submit">完成注册</button>
+                </div>
 
-            <button>完成注册</button>
-        </form>
+                
+            </form>
 
+
+
+        </div>
     </div>
-
-
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/content.js"></script>
 </body>
 
 
